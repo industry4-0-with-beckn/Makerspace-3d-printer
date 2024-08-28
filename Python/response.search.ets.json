@@ -1,0 +1,172 @@
+{
+    "context": {
+      "domain": "supply-chain-services:0.1.0",
+      "location": {
+        "country": {
+          "code": "DE"
+        }
+      },
+      "version": "1.1.0",
+      "action": "on_search",
+      "bap_id": "supply-chain-protocol.becknprotocol.io",
+      "bap_uri": "https://supply-chain-protocol-network.becknprotocol.io/",
+      "transaction_id": "a9aaecca-10b7-4d19-b640-b047a7c62196",
+      "message_id": "bb579fb8-cb82-4824-be12-fcbc405b6608",
+      "ttl": "PT30M",
+      "timestamp": "2023-05-25T05:23:03.443Z",
+      "bpp_id": "bpp.supply-chain.makerspace.io",
+      "bpp_uri": "https://bpp.supply-chain.makerspace.io"
+    },
+    "message": {
+      "catalog": {
+          "descriptor": {
+              "name": "BPP",
+              "code": "bpp",
+              "short_desc": "Unified Strapi BPP"
+          },
+          "providers": [
+              {
+                  "id": "41",
+                  "descriptor": {
+                      "name": "Makerspace - S",
+                      "short_desc": "Makerspace",
+                      "long_desc": "Makerspace, Hof",
+                      "additional_desc": {
+                          "url": "www.makerspace.com"
+                      },
+                      "images": [
+                          {
+                              "url": "https://makerspace/assembly/makerspace_logo.png",
+                              "size_type": "sm"
+                          }
+                      ]
+                  },
+                  "categories": [
+                      {
+                          "id": "65",
+                          "descriptor": {
+                              "name": "Assembly",
+                              "code": "assembly"
+                          }
+                      }
+                  ],
+                  "rating": "4.7",
+                  "short_desc": "Makerspace",
+                  "locations": [
+                      {
+                          "id": "13",
+                          "gps": "50.311674, 11.90335",
+                          "address": "154/9, Bannerghatta Rd, opposite IIM-B, Sahyadri Layout, Panduranga Nagar, Bengaluru, Karnataka 560076",
+                          "city": {
+                              "name": "Bangalore F"
+                          },
+                          "country": {
+                              "name": "India"
+                          },
+                          "state": {
+                              "name": "Karnataka"
+                          },
+                          "area_code": "560076"
+                      }
+                  ],
+                  "rateable": true,
+                  "items": [
+                      {
+                          "id": "61",
+                          "descriptor": {
+                              "name": "Intermittent assembly type",
+                              "code": "IAT",
+                              "short_desc": "This is an intermittent assembly type.",
+                              "long_desc": "<div>Intermittent Assembly Product - Enhanced Efficiency, Unmatched Performance!</h1><p>Welcome to the future of assembly technology! Revolutionize your workflow with unparalleled efficiency and precision.</p><p>Key Features:</p><ul><li>Precise Intermittent Assembly Technology.</li><li>Advanced automation for time and resource savings.</li><li>Durable materials for longevity and reliability.</li><li>Customizable settings for various assembly requirements.</li></ul><p>Invest in the future of assembly technology. Elevate your production capabilities today!</div>",
+                              "images": [
+                                  {
+                                      "url": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJQbANiJKOddLqjBqk3Y-bws-pUxisbxvhrw&usqp=CAU"
+                                  }
+                              ]
+                          },
+                          "price": {
+                              "value": "300",
+                              "currency": "EUR"
+                          },
+                          "category_ids": [
+                              "65"
+                          ],
+                          "tags": [
+                              {
+                                  "display": true,
+                                  "list": [
+                                      {
+                                          "value": "Product Information",
+                                          "code": "product-info",
+                                          "display": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "display": true,
+                                  "list": [
+                                      {
+                                          "value": "Assembly Information",
+                                          "code": "assembly-info",
+                                          "display": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "display": true,
+                                  "list": [
+                                      {
+                                          "value": "Scale Information",
+                                          "code": "scale-info",
+                                          "display": true
+                                      }
+                                  ]
+                              },
+                              {
+                                  "display": true,
+                                  "list": [
+                                      {
+                                          "value": "Printer Information\"",
+                                          "code": "printer-info",
+                                          "display": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      },
+                      {
+                          "id": "62",
+                          "descriptor": {
+                              "name": "Packaging",
+                              "code": "PCK",
+                              "short_desc": "Packaging",
+                              "images": [
+                                  {
+                                      "url": "https://i.pinimg.com/474x/42/8e/08/428e08c7c632d41fbd44d484c6c24616.jpg"
+                                  }
+                              ]
+                          },
+                          "price": {
+                              "value": "0",
+                              "currency": "INR"
+                          },
+                          "tags": [
+                              {
+                                  "display": true,
+                                  "descriptor": {
+                                      "description": "online courses"
+                                  },
+                                  "list": [
+                                      {
+                                          "display": true
+                                      }
+                                  ]
+                              }
+                          ]
+                      }
+                  ]
+              }
+          ]
+      }
+  }
+  }

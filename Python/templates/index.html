@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimaker S5 Print Job</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #f8f9fa;
+            color: #343a40;
+            font-family: Arial, sans-serif;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-brand {
+            color: #fff;
+            font-weight: bold;
+        }
+        .container {
+            margin-top: 20px;
+        }
+        .card {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .card-header {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: #28a745;
+            border-color: #28a745;
+            border-radius: 50px;
+        }
+        .btn-primary:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        footer {
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #007bff;
+            color: #fff;
+            text-align: center;
+        }
+        .intro-img {
+            width: 40%; /* Adjust size for mobile */
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .intro-text {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .intro-text h2 {
+            color: #007bff;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        @media (min-width: 768px) {
+            .intro-img {
+                width: 300px; /* Larger image size on larger screens */
+            }
+            .intro-text h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg">
+        <a class="navbar-brand" href="#">Makerspace Printing Service</a>
+    </nav>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Introduction Section -->
+        <div class="intro-text">
+            <img src="static/ultimaker_s5.jpg" alt="Ultimaker S5" class="intro-img">
+            <h2>Start Your Print Job</h2>
+            <p>Upload your file to initiate a 3D printing job with the Ultimaker S5. Ensure your file is properly prepared for printing.</p>
+        </div>
+
+        <!-- Upload File Card -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Upload Print File</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="uploadForm" enctype="multipart/form-data">
+                            <div class="form-group">
+                                <input type="file" class="form-control-file" id="fileInput" name="file" accept=".gcode,.gcode.gz,.ufp">
+                                <small class="form-text text-muted">
+                                    Please upload a file with one of the following extensions: .gcode, .gcode.gz, .ufp
+                                </small>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">Upload File</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Ultimaker S5 Control | All Rights Reserved</p>
+    </footer>
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+    <!-- Custom JS -->
+    <script>
+        // Handle form submission for starting the print job
+        $('#uploadForm').on('submit', function(event) {
+            event.preventDefault();
+            var formData = new FormData(this);
+
+            $.ajax({
+                url: '/start_print_job',
+                type: 'POST',
+                data: formData,
+                contentType: false,
+                processData: false,
+                success: function(response) {
+                    alert(response.message);
+                },
+                error: function() {
+                    alert('Failed to start print job.');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
